@@ -1,0 +1,42 @@
+html{
+overflow-x:hidden;
+width:100%;
+}
+nav,.page-footer{
+background-color:#2c2f33;
+}
+.page-footer{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+}
+.page-footer h5, .page-footer a, .page-footer p, .nav-extended a, .nav-extended .tabs .tab a{
+color:#99aab5;
+}
+.page-footer .footer-copyright {
+background-color:#23272a;
+color:#99aab5;
+}
+
+#menu.center-content{
+display:flex;
+justify-content: center;
+position:absolute;
+right:0;
+left:0;
+bottom:0;
+}
+
+#logo.center-content{
+display:flex;
+justify-content: center;
+position:absolute;
+right:0;
+left:0;
+top:0;
+}
+.nav-wrapper{
+min-height:120px !important;
+}
+
