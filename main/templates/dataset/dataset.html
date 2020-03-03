@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% block title %}Datasets{% endblock %}
+{% block dataset_active %}active{% endblock %}
+{% block dataset_active_sn %}active{% endblock %}
+{% block body %}
+{% load static %}
+<div class="container">
+    <nav class="nav-search">
+        <div class="nav-wrapper">
+            <form>
+                <div class="input-field">
+                    <input id="search" type="search" required placeholder=" example search 'world finance'">
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="img" style="background-image: url({% static 'main/images/dataset_cover.png' %});">
+        <img class="div" src="{% static 'images/dataset_cover.png' %}">
+    </div>
+    <div class="row">
+        <a class="waves-effect waves-teal btn-flat"><i class="material-icons right">file_upload</i>upload</a>
+        <a class="waves-effect waves-teal btn-flat"><i class="material-icons right">cloud</i>api</a>
+        <a class="waves-effect waves-teal btn-flat">button</a>
+    </div>
+    <div class="row">
+        <ul class="collection">
+            {% if datasets %}
+            {% for dataset in datasets %}
+            <li class="collection-item avatar">
+                <img src="images/yuna.jpg" alt="" class="circle">
+                <span class="title">Title</span>
+                <p>First Line <br>
+                    Second Line
+                </p>
+                <a href="{% url 'main:favourite_dataset' dataset.title %}" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
